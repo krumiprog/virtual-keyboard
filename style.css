@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.1);
+}
+
+.input-area {
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+  height: calc(100vh - 380px);
+  min-height: 300px;
+  margin: 30px auto;
+  padding: 20px;
+  resize: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 90%;
+  max-width: 1000px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.keyboard__row {
+  display: flex;
+  column-gap: 5px;
+}
+
+.keyboard__key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  min-width: 6%;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: rgba(0,0,0,1);
+  background: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  outline: none;
+  transition: color, background-color .5s;
+}
+
+.keyboard__key:hover {
+  color: #fff;
+  background:rgba(0,0,0,0.3);
+  box-shadow: none;
+}
+
+.keyboard__key_pressed {
+  color: #fff;
+  background:rgba(0,0,0,0.3);
+  box-shadow: none;
+}
+
+.keyboard__key_double {
+  justify-content: space-between;
+}
+
+.keyboard__key_double .disable {
+  color: rgba(0,0,0,0.5);
+}
+
+.keyboard__key_wide {
+  flex-grow: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .input-area {
+    width: 100%;
+  }
+
+  .keyboard {
+    width: 100%;
+  }
+
+  .keyboard__row {
+    column-gap: 2px;
+  }
+
+  .keyboard__key {
+    font-size: 14px;
+  }
+}
